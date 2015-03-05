@@ -103,6 +103,7 @@ public class ThriftSequenceFileRecordWriterProvider implements RecordWriterProvi
         return new RecordWriter<IEtlKey, CamusWrapper>() {
             @Override
             public void write(IEtlKey key, CamusWrapper data) throws IOException, InterruptedException {
+                //camus deploy test
                 writer.append(new LongWritable(key.getTime()), new BytesWritable((byte[])data.getRecord()));
             }
 
