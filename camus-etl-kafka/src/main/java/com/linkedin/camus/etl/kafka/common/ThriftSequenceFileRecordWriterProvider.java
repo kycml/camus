@@ -92,7 +92,7 @@ public class ThriftSequenceFileRecordWriterProvider implements RecordWriterProvi
             conf,
             path,
             LongWritable.class,
-            Text.class,
+            BytesWritable.class,
             compressionType,
             compressionCodec,
             context
